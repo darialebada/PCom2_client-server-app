@@ -1,16 +1,15 @@
 ### Lebada Daria-Cristiana, 323CA
 ## Tema2 PCom - Aplicatie client-server TCP si UDP
 
-# Functionare aplicatie
-Pentru implementarea celor doua programe m-am folosit de laboratoarele 5 (pentru socket UDP)
-si 7 (pentru socket TCP, multiplexare si DIE() - helpers.h). Makefile-ul este realizat tot
-dupa exemplele din laboratoare.
-
 # Cum se utilizeaza:
   - se ruleaza ./server 12345
   - se ruleaza clienti tcp: ex ./subscriber C1 127.0.0.1 12345
   - dupa ce se aboneaza clientii, se trimit mesaje de la clientii udp:
   python3 udp_client.py --source-port 1234 --input_file three_topics_payloads.json --mode random --delay 2000 127.0.0.1 12345
+
+# Functionare aplicatie
+Pentru implementarea celor doua programe m-am folosit de laboratoarele 5 (pentru socket UDP)
+si 7 (pentru socket TCP, multiplexare si DIE() - helpers.h).
 
 In server deschid un socket TCP si unul UDP pe care ii adaug in structura pfds (alaturi de
 file descriptorul pentru citirea datelor de la stdin) care se va ocupa cu monitorizarea evenimentelor.

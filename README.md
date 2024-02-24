@@ -7,6 +7,16 @@
   - dupa ce se aboneaza clientii, se trimit mesaje de la clientii udp:
   python3 udp_client.py --source-port 1234 --input_file three_topics_payloads.json --mode random --delay 2000 127.0.0.1 12345
 
+# Scopul proiectului
+Realizarea unei aplicatii care respecta modelul client-server pentru gestiunea mesajelor in care avem urmatoarele
+3 componente:
+1. Serverul (unic) care va realiza legatura intre clientii din platforma, cu scopul publicarii si abonarii la mesaje;
+2. Clientii TCP care vor avea urmatorul comportament: un client TCP se conecteaza la server, poate primi (in orice moment) de la tastatura
+comenzi de tipul subscribe/ unsubscribe si afiseaza pe ecran mesajele primite de la server;
+3. Clientii UDP care publica, prin trimiterea catre server, mesaje in platforma propusa folosind un protocol predefinit.
+
+
+
 # Functionare aplicatie
 In server deschid un socket TCP si unul UDP pe care ii adaug in structura pfds (alaturi de
 file descriptorul pentru citirea datelor de la stdin) care se va ocupa cu monitorizarea evenimentelor.

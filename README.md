@@ -8,9 +8,6 @@
   python3 udp_client.py --source-port 1234 --input_file three_topics_payloads.json --mode random --delay 2000 127.0.0.1 12345
 
 # Functionare aplicatie
-Pentru implementarea celor doua programe m-am folosit de laboratoarele 5 (pentru socket UDP)
-si 7 (pentru socket TCP, multiplexare si DIE() - helpers.h).
-
 In server deschid un socket TCP si unul UDP pe care ii adaug in structura pfds (alaturi de
 file descriptorul pentru citirea datelor de la stdin) care se va ocupa cu monitorizarea evenimentelor.
 Apoi intru intr-un loop de server unde incep sa prelucrez informatiile primite de la clienti. 
